@@ -2,6 +2,11 @@ pipeline{
 
     agent any
 
+    parameters {
+        choice choices: ['chrome', 'firefox'], description: 'Select the browser', name: 'Browser'
+    }
+
+
     stages{
 
         stage('Start Grid'){
